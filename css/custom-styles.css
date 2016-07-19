@@ -25,7 +25,7 @@ h1, h2, h3, h4 , h5, h6 {
 h1, h2, h3, h4, h5 {text-shadow: 1px 1px 0 #fdfdfd, 1px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd;}
 h1.title-bg, h2.title-bg, h3.title-bg, h4.title-bg , h5.title-bg, h6.title-bg {
 	background: #ffffff;
-	padding:10px 5px;
+	padding:1.5% 1%;
 	margin: 0px 0px 20px 0px;
 
 }
@@ -54,7 +54,6 @@ blockquote {
 	border-left: 5px solid #999;
 }
 blockquote.pull-right {border-right: 5px solid #dadad8;}
-
 
 /**************************************
 / Header
@@ -124,15 +123,19 @@ blockquote.pull-right {border-right: 5px solid #dadad8;}
 /**************************************
 / Slider
 **************************************/
-#carousel img {opacity:0.7;}
+#carousel img {opacity:0.5;}
 #carousel img:hover{opacity: 1;}
+.main_page { margin-bottom:60px;}
+.main_page img { box-shadow: 0 0 7px 1px #303030 ;}
 
 /**************************************
 / Gallery
 **************************************/
 .gallery-title { margin-bottom:15px; }
 .gallery-item { margin-bottom:15px; margin-top:15px; }
+.gallery-item img { box-shadow: 0 0 4px 1px #303030;}
 .gallery img:hover { filter: brightness(110%);}
+.photos_slider { box-shadow: 0 0 4px 1px #303030;}
 
 .gallery-hover-6col,
 .gallery-hover-4col,
@@ -370,7 +373,7 @@ ul.img-feed li {
 .color-bar-1 { background:#414141; height:5px; }
 .color-bar-2 { height:3px; }
 .page-header { margin:0px }
-.lead {line-height:28px; margin: 20px 0px 30px 0px; }
+.lead {line-height:22px; margin: 20px 0px 30px 0px; }
 
 
 /* Mobile Portrait Size to Tablet Portrait Size */
