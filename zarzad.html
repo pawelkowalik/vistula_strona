@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" href="lightbox/lightbox.css" />
-    <link rel="stylesheet" href="css/flexslider2.css" />
+    <link rel="stylesheet" href="css/flexslider.css" />
     <link rel="stylesheet" href="css/slicknav.css" />
     <link rel="stylesheet" href="css/custom-styles.css">
 
@@ -33,28 +33,16 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.flexslider.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.quicksand.js"></script>
     <script src="js/jquery.custom.js"></script>
     <script type="text/javascript">
         $(window).load(function(){
 
-            $('#carousel').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 100,
-                itemMargin: 0,
-                asNavFor: '#slider'
-            });
-
-            $('#slider').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
+            $('.flexslider').flexslider({
+                animation: "fade",
                 slideshow: true,
-                sync: "#carousel"
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
             });
             $('#menu').slicknav({
                 prependTo: '#menu-mobile'
@@ -84,7 +72,7 @@
         <div class="span5 navigation">
             <div class="navbar hidden-phone hidden-tablet">
                 <ul class="nav">
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="index.html">O nas <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="historia.html">Historia</a></li>
@@ -92,7 +80,7 @@
                             <li><a href="dokumenty.html">Dokumenty</a></li>
                         </ul>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="budynki.html">Budynki</a>
                     </li>
                     <li>
@@ -135,133 +123,23 @@
             </div>
         </div>
     </div><!-- End Header -->
-    <!-- Page Content
-    ================================================== -->
-    <div class="row">
-
-        <!-- Gallery Items
-        ================================================== -->
-        <div class="span12 gallery-single">
+    <div class="row headline"><!-- Begin Headline -->
+        <div class="span1"></div>
+        <div class="span10">
+            <h4 class="title-bg">Zarząd SBM Vistula</h4>
             <div class="row">
-                <div class="span7 photos_slider">
-                    <div id="slider" class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <img src="budynki/low25/01.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/02.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/03.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/04.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/05.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/06.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/07.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/08.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/09.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/10.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/11.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/12.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/13.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/14.jpg" />
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="carousel" class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <img src="budynki/low25/s-01.jpg"/>
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-02.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-03.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-04.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-05.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-06.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-07.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-08.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-09.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-10.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-11.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-12.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-13.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/low25/s-14.jpg" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="span5">
-                    <h4>Łowicka 25</h4>
-                    <p class="lead">Budynek mieszkalny wielorodzinny</p>
-                    <p>Budynek wielorodzinny w którym znajdują się 94 lokale mieszkalne oraz 3 lokale użytkowe. Budynek
-                        posiada 8 kondygnacji naziemnych i dwa poziomy garaży podziemnych, jest przystosowany dla osób
-                        niepełnosprawnych.<br>
-                        Wysoki standard wykończenia budynku jest zauważalny już w wejściu do holu, gdzie surowy beton
-                        połączony z drewnem i stalą nierdzewną świadczy o ponadczasowym spojrzeniu architekta. W
-                        budynku znajduje się całodobowa recepcja. Do dyspozycji mieszkańców jest piękne patio gdzie
-                        można odpocząć na ławeczce i upajać się zapachem lawendy.<br>
-                        W budynku znajduje się biuro Spółdzielni w lokalu P2 na parterze.</p>
-                    <ul class="project-info">
-                        <li><h6>Architekt:</h6> P. Ryszard Girtler, P. Marta Girtler-Szymborska <a href="http://atelier3.pl/">pracownia „Atelier 3”</a></li>
-                        <li><h6>Wysokość:</h6> 8 kondygnacji</li>
-                        <li><h6>Rozpoczęcie budowy:</h6> 2001</li>
-                        <li><h6>Zakończenie budowy:</h6> 2004</li>
-                    </ul>
+                <div class="span6"><p class="lead">
+                    Zarząd:<br>
+                    P. Bożena Jabłońska – Prezes<br>
+                    P. Marzena Szraga – V-ce Prezes<br><br>
+                    Rada nadzorcza:<br>
+                    P. Danuta Kaliszuk – Przewodnicząca Rady Nadzorczej<br>
+                    P. Maciej  Braniewski – Z-ca Przewodniczącej Rady Nadzorczej<br>
+                    P. Paweł Kamiński – Członek Rady Nadzorczej<br><br></div>
 
-                    <a href="budynki.html" class="pull-left"><i class="icon-arrow-left"></i>Powrót do galerii</a>
-                </div>
             </div>
-
-        </div><!-- End gallery-single-->
-
-    </div><!-- End container row -->
+        </div>
+    </div><!-- End Headline -->
 
 </div> <!-- End Container -->
 

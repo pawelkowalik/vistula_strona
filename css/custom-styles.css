@@ -61,11 +61,12 @@ blockquote.pull-right {border-right: 5px solid #dadad8;}
 .logo { margin-top:30px; padding-bottom: 20px; background: url(../img/logo.png) no-repeat;}
 .logo img { padding-right:20px; }
 .logo h5 { display: inline-block; }
-.headline { margin-bottom:30px; }
+.headline { margin-bottom:30px; min-height: 500px;}
 .company {margin-left: 10%;}
 .navigation { margin-top:40px;}
 .navigation .navbar { background:#dadad8;}
 .company a, a:hover { color: #000000; text-decoration: none;}
+h3 .company { text-shadow: 1px 1px 0 #fdfdfd, 2px 2px 1px rgba(24, 24, 24, 0.4), 0 0 1px #fdfdfd;}
 
 .navbar .nav > li > a {
 	font-family: "Oswald", sans-serif;
@@ -74,6 +75,10 @@ blockquote.pull-right {border-right: 5px solid #dadad8;}
 	text-transform:uppercase;
 	font-size:16px;
 	padding: 10px 6px 10px;
+}
+
+@media (min-width: 1200px) {
+	.company { font-size:29px;}
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -84,9 +89,9 @@ blockquote.pull-right {border-right: 5px solid #dadad8;}
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
-	.headline .lead {display: none;}
+	.headline .lead {font-size: 12px;}
 	.navbar .nav > li > a { font-size:13px;}
-	.company { font-size:20px;}
+	.company { font-size:22px;}
 }
 
 /* Portrait tablet */
@@ -103,6 +108,65 @@ blockquote.pull-right {border-right: 5px solid #dadad8;}
 	box-shadow: 0px 0px 0px #dadad8 inset;
 	background-color: #dadad8;
 }
+
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+	color:#5f4842;
+	box-shadow: 0px 0px 0px #dadad8 inset;
+	background-color: #dadad8;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; }
+.dropdown-menu{
+	min-width: 70px;
+	font-family: "Oswald", sans-serif;
+	font-weight: normal;
+	text-transform:uppercase;
+	font-size:12px;
+	opacity: 0.9;
+	padding: 0px;
+	margin: 0px;
+	background-color: #383838;
+	border: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 2px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+
+}
+.navbar .nav > li > .dropdown-menu:before {
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+}
+.dropdown-menu a {
+	color: #ababab;
+	border-bottom:1px solid #474747;
+	padding: 10px 10px;
+	margin:0px 10px;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+	color: #f9f9f9;
+	text-decoration: none;
+	background-color: #383838;
+	background-image: none;
+	filter: none;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+	border-top-color: #ababab;
+}
+.navbar .nav > li > .dropdown-menu:before,
+.navbar .nav > li > .dropdown-menu:after {
+	display: none;
+}
+
 
 @media (min-width: 992px) {
 	.slicknav_menu {
