@@ -16,7 +16,7 @@ $message = $_POST['message'];
 $odkogo = $email;
 
 // Podajesz adres email na który chcesz otrzymać wiadomość
-$dokogo = "pawkow@pawkow.ayz.pl";
+$dokogo = "vistula@sbmvistula.pl";
 
 // Podajesz tytuł jaki ma mieć ta wiadomość email
 $tytul = "Formularz kontaktowy z sbmvistula.pl";
@@ -33,7 +33,7 @@ $wiadomosc .= "Email: " . $email . "\n";
 $wiadomosc .= "Wiadomość: " . $message . "\n";
 
 // Wysyłamy wiadomość
-$sukces = mail($dokogo, $tytul, $wiadomosc, $naglowek, '-f kowalik.paw@gmail.com');
+$sukces = mail($dokogo, $tytul, $wiadomosc, $naglowek);
 
 // Przekierowywujemy na potwierdzenie
 if ($sukces){
