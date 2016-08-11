@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" href="lightbox/lightbox.css" />
-    <link rel="stylesheet" href="css/flexslider2.css" />
+    <link rel="stylesheet" href="css/flexslider.css" />
     <link rel="stylesheet" href="css/slicknav.css" />
     <link rel="stylesheet" href="css/custom-styles.css">
 
@@ -33,28 +33,16 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.flexslider.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.quicksand.js"></script>
     <script src="js/jquery.custom.js"></script>
     <script type="text/javascript">
         $(window).load(function(){
 
-            $('#carousel').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
-                slideshow: false,
-                itemWidth: 100,
-                itemMargin: 0,
-                asNavFor: '#slider'
-            });
-
-            $('#slider').flexslider({
-                animation: "slide",
-                controlNav: false,
-                animationLoop: false,
+            $('.flexslider').flexslider({
+                animation: "fade",
                 slideshow: true,
-                sync: "#carousel"
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
             });
             $('#menu').slicknav({
                 prependTo: '#menu-mobile'
@@ -92,7 +80,7 @@
                             <li><a href="dokumenty.html">Dokumenty</a></li>
                         </ul>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="budynki.html">Budynki</a>
                     </li>
                     <li>
@@ -101,7 +89,7 @@
                     <li>
                         <a target="_blank" href="https://vistula.sbit.net.pl/login.php">E-kartoteka</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="kontakt.html">Kontakt</a>
                     </li>
                 </ul>
@@ -135,90 +123,16 @@
             </div>
         </div>
     </div><!-- End Header -->
-    <!-- Page Content
-    ================================================== -->
-    <div class="row">
+    <div class="row"><!--Container row-->
+        <div class="span1"></div>
+        <div class="span10">
+            <h4 class="title-bg">Błąd</h4>
+            <br>
+            <p class="lead">Nie udało się wysłać wiadomości.<br><br><a href="kontakt.html">Spróbuj jeszcze raz.</a></p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <!-- Gallery Items
-        ================================================== -->
-        <div class="span12 gallery-single">
-            <div class="row">
-                <div class="span7 photos_slider">
-                    <div id="slider" class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <img src="budynki/san/01.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/02.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/03.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/04.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/05.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/06.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/07.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/08.jpg" />
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="carousel" class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <img src="budynki/san/s-01.jpg"/>
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-02.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-03.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-04.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-05.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-06.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-07.jpg" />
-                            </li>
-                            <li>
-                                <img src="budynki/san/s-08.jpg" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="span5">
-                    <h4>Saneczkowa 33</h4>
-                    <p class="lead">Osiedle domów jednorodzinnych</p>
-                    <p>
-                        Osiedle było budowane w dwóch etapach: w latach 2001-2003 powstało pierwsze 10 domów, a
-                        następnie w latach 2003-2005 powstało kolejne 5 budynków.
-                    </p>
-                    <ul class="project-info">
-                        <li><h6>Architekt:</h6> P. Zbigniew Wikłacz</li>
-                        <li><h6>Rozpoczęcie budowy:</h6> 2001</li>
-                        <li><h6>Zakończenie budowy:</h6> 2005</li>
-                    </ul>
+        </div>
 
-                    <a href="budynki.html" class="pull-left"><i class="icon-arrow-left"></i>Powrót do galerii</a>
-                </div>
-            </div>
-
-        </div><!-- End gallery-single-->
 
     </div><!-- End container row -->
 

@@ -27,6 +27,8 @@ h1.title-bg, h2.title-bg, h3.title-bg, h4.title-bg , h5.title-bg, h6.title-bg {
 	background: #ffffff;
 	padding:1.5% 1%;
 	margin: 0px 0px 20px 0px;
+	box-shadow: 1px 1px 4px #39393f;
+	border-radius: 2px;
 
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {color:#7f7f7f;}
@@ -85,8 +87,13 @@ h3 .company { text-shadow: 1px 1px 0 #fdfdfd, 2px 2px 1px rgba(24, 24, 24, 0.4),
 	.logo, .navigation {text-align: center;}
 	.row.header {margin-bottom: 30px;}
 	.logo h5 {display: block; float: right;}
-
+	.company { font-size:20px;}
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.company { font-size:19px;}
+}
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
 	.headline .lead {font-size: 12px;}
