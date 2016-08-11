@@ -33,7 +33,7 @@ $wiadomosc .= "Email: " . $email . "\n";
 $wiadomosc .= "Wiadomość: " . $message . "\n";
 
 // Wysyłamy wiadomość
-$sukces = mail($dokogo, $tytul, $wiadomosc, $naglowek);
+$sukces = mail($dokogo, $tytul, $wiadomosc, $naglowek, '-f kowalik.paw@gmail.com');
 
 // Przekierowywujemy na potwierdzenie
 if ($sukces){
